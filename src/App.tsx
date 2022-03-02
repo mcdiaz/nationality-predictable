@@ -1,12 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {NameForm} from "./NameForm";
-import {Container, Row} from "react-bootstrap";
+import {Predictible} from "./Predictible";
 
 function App() {
   return (
-        <NameForm />
+        <Predictible />
   );
 }
 

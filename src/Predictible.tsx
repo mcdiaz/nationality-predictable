@@ -1,6 +1,4 @@
 import React from 'react';
-import {Input} from "@mui/material";
-import {Col, Container, Row} from "react-bootstrap";
 
 interface IProps {
 }
@@ -11,7 +9,7 @@ interface IState {
     codCountries: any[];
 }
 
-export class NameForm extends React.Component<IProps, IState> {
+export class Predictible extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
@@ -34,7 +32,7 @@ export class NameForm extends React.Component<IProps, IState> {
     }
 
     getInfoCountries() {
-        //get the information of the country based on the country code
+        //Get the information of the country based on the country code
         let codCountry = "";
         if (this.state.codCountries.length !== 0) {
             for (let country of this.state.codCountries) {
@@ -58,6 +56,7 @@ export class NameForm extends React.Component<IProps, IState> {
                     }
                     let index=0;
                     while (index < this.state.codCountries.length && index < this.state.countries.length) {
+                        //Display result with their probability
                         console.log(this.state.countries[index] + "|" + this.state.codCountries[index].probability + "\n\r");
                     }
                 })
@@ -92,12 +91,12 @@ export class NameForm extends React.Component<IProps, IState> {
 
         if (this.state.valueName === '') {
             button = (<button type='button' disabled={true}>
-                Traer
+                Show
             </button>);
         }
         else {
             button = (<button type='button' onClick={(e) => this.getProbabilities(e)}>
-                Traer
+                Show
             </button>);
         }
         return button;
@@ -107,7 +106,7 @@ export class NameForm extends React.Component<IProps, IState> {
         return(
           <form onSubmit={this.handleSubmit}>
               <label>
-                  Nombre:
+                  Name:
                   <input type="text" value={this.state.valueName} onChange={this.handleChange} />
               </label>
               {this.renderButton()}

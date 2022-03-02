@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e8ddcfa-6a28-40e9-b558-1fbbbe20478d" name="Default Changelist" comment="Fetch results hitting the API.">
+    <list default="true" id="1e8ddcfa-6a28-40e9-b558-1fbbbe20478d" name="Default Changelist" comment="Fix display results. Clear code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NameForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/NameForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NameForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Predictible.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +70,7 @@
       <workItem from="1645795218035" duration="5741000" />
       <workItem from="1646064584411" duration="4041000" />
       <workItem from="1646159288439" duration="4154000" />
-      <workItem from="1646227268462" duration="4346000" />
+      <workItem from="1646227268462" duration="5166000" />
     </task>
     <task id="LOCAL-00001" summary="Fetch results hitting the API.">
       <created>1646231567173</created>
@@ -78,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646231567174</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix display results. Clear code">
+      <created>1646232601149</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646232601150</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +106,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fetch results hitting the API." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fetch results hitting the API." />
+    <MESSAGE value="Fix display results. Clear code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix display results. Clear code" />
   </component>
 </project>
