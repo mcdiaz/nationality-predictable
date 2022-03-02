@@ -35,17 +35,14 @@ export class NameForm extends React.Component<IProps, IState> {
 
     getInfoCountries() {
         //get the information of the country based on the country code
-        let infoCountries;
         let codCountry = "";
         if (this.state.codCountries.length !== 0) {
-            console.log(this.state.codCountries);
             for (let country of this.state.codCountries) {
                 if (codCountry !== "") {
                     codCountry = codCountry + "," + country.country_id;
                 }
                 else
                     {codCountry = country.country_id;}
-                console.log("codCountry " + codCountry);
             }
         }
         if (codCountry !== "") {
@@ -54,36 +51,23 @@ export class NameForm extends React.Component<IProps, IState> {
                 )
                 .then(response => response.json())
                 .then(response => {
-                    console.log("resp" + response);
                     let arrCountries = [];
                     for (let country of response) {
-                        console.log(this.state.countries);
                         arrCountries.push(country.name.common);
                         this.setState({countries: arrCountries});
                     }
                     let index=0;
                     while (index < this.state.codCountries.length && index < this.state.countries.length) {
-                        infoCountries = (<Container>
-                            <Row>
-                                <Col>
-                                    {this.state.countries[index]}
-                                </Col>
-                                <Col>
-                                    {this.state.codCountries[index]}
-                                </Col>
-                            </Row>
-                        </Container>)
+                        console.log(this.state.countries[index] + "|" + this.state.codCountries[index].probability + "\n\r");
                     }
                 })
                 .catch(error => {
                     console.log(error)
                 })
         }
-        return infoCountries;
     }
 
     getProbabilities(e: any) {
-        let showProbabilities;
         e.preventDefault();
         //Fetch results hitting the API
         fetch("https://api.nationalize.io?name=" + this.state.valueName,
@@ -92,18 +76,14 @@ export class NameForm extends React.Component<IProps, IState> {
             .then(response => response.json())
             .then(response => {
                 this.setState({codCountries: response.country});
-                console.log(response);
-                console.log(this.state.codCountries);
                 if (this.state.codCountries.length !== 0) {
-                    showProbabilities = this.getInfoCountries();
-                    console.log("aca");
+                    this.getInfoCountries();
                 }
             })
             .catch(error => {
                 console.log(error)
             });
 
-            return showProbabilities;
     }
 
 
